@@ -5,7 +5,7 @@ A simple website that calculates your recommended daily protein intake based on 
 
 Uses the variables: male or female, your current weight and your activity level.
 
-# Commits and Imporvements
+# Commits and Improvements
 This is my first official webpage as well as my first repository here on github. If you have an issue with the code I wrote feel free
 to make your own changes. I know a lot of improvments can be made when it comes to the javascript code but also the css styling or the design
 of the page, but I am very new to web dev and have only been coding for 2 weeks. Thanks.
