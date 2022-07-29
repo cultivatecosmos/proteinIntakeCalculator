@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protein Intake Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="background">
+    <section>
+        <div>
+            <img class="logo" src="pics\logo.png" alt="logo">
+        </div>
+        <div class="header">
+            <h1>Protein Intake Calculator</h1>
+        </div>
+        <div class="menu">
+            <h3 class="instructions">To calculate your recommended daily intake, fill in accurate info below.</h3>
+            
+            <form id="form" class="form">
+                <!--Gender-->
+                <p class="question"><strong><u>What's your gender?</u></strong></p>
+                <input type="radio" id="male" name="gender"class="input" checked>
+                <label class="label"for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" class="input">
+                <label class="label"for="female">Female</label><br>
+                <!--Current Weight-->
+                <p class="question"><strong><u>What is your current weight? (kg)</u></strong></p>
+                <input type="number" id="weight" required
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+
+                <!--Activity Level-->
+                <p class="question"><strong><u>What is you activity level?</u></strong></p>
+                <input type="radio" id="sedentary" name="activity_level" class="input" checked>
+                <label class="label"for="sedentary">Sedentary (Not Active)</label>
+                <input type="radio" id="slightly_active" name="activity_level" class="input">
+                <label class="label"for="slightly_active"><u>Slightly</u> Active (<u>1-3 times/week</u>)</label><br>
+                <input type="radio" id="active" name="activity_level" class="input">
+                <label class="label"for="active">Active (<u>4-5 times/week</u>)</label>
+                <input type="radio" id="very_active" name="activity_level" class="input">
+                <label class="label"for="very_active">Very Active (<u>6-7 times/week</u>)</label>
+                <div class="btn_container">
+                    <button type="button" id="calc_button" onclick="protein_calculator()">Calculate</button>
+                </div>
+            </form>
+            
+                
+        
+            
+           
+           
+            <!--Output Field-->
+            
+            <div id="ouptut_container">
+                <p id="output_title">Your daily protein intake should be around:</p>
+                <p id="output"></p>
+            </div>
+        </div>
+
+    </section>
+    
+</body>
+</html>
